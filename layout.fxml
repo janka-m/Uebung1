@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="284.0" prefWidth="348.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <TextField fx:id="textFieldEingabe" alignment="CENTER" layoutX="100.0" layoutY="14.0" promptText="Bitte Text eingeben" />
+        <Button fx:id="buttonDruecken" layoutX="100.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="149.0" text="Drück mich" />
+        <Label fx:id="labelAusgabe" alignment="CENTER" layoutX="23.0" layoutY="209.0" prefHeight="61.0" prefWidth="306.0" text="Ausgabe" textAlignment="CENTER" />
+      <Slider fx:id="sldr_count" layoutX="18.0" layoutY="171.0" prefHeight="14.0" prefWidth="314.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <RadioButton fx:id="rdb_exTXT" layoutX="62.0" layoutY="90.0" mnemonicParsing="false" text="Export TXT">
+         <toggleGroup>
+            <ToggleGroup fx:id="grp_ExportType" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdb_exCSV" layoutX="209.0" layoutY="90.0" mnemonicParsing="false" text="Export CSV" toggleGroup="$grp_ExportType" />
+      <RadioButton fx:id="rdb_ene" layoutX="79.0" layoutY="134.0" mnemonicParsing="false" text="ENE">
+         <toggleGroup>
+            <ToggleGroup fx:id="grp_EneMeneMiste" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="rdb_miste" layoutX="222.0" layoutY="134.0" mnemonicParsing="false" text="MISTE" toggleGroup="$grp_EneMeneMiste" />
+      <RadioButton fx:id="rdb_mene" layoutX="149.0" layoutY="134.0" mnemonicParsing="false" text="MENE" toggleGroup="$grp_EneMeneMiste" />
+    </children>
+</AnchorPane>
